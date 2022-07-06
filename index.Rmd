@@ -93,7 +93,7 @@ Row {data-height=400}
 grafico_ggplot2 <-
   cantones %>%
   st_drop_geometry() %>%
-  slice_max(area, n = 10) %>%
+  slice_max(area, n = 20) %>%
   ggplot(aes(x = reorder(canton, -area), y = area)) +
   geom_bar(stat = "identity") +
   xlab("Cantón") +
